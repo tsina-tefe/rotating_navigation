@@ -13,15 +13,15 @@ body{
     justify-content: center; */
     height: 100vh;
     margin: 0;
-    background-color: black;
+    background-color: #222;
     overflow-x: hidden;
 }
 
 .circle{
-    position: absolute;
-    top: -90px;
-    left: -90px;
-    transition: ease-in-out 0.5s;
+    position: fixed;
+    top: -100px;
+    left: -100px;
+    transition:transform linear 0.5s;
     z-index: 1;
 }
 .nav{
@@ -44,28 +44,32 @@ body{
 }
 
 .open{
-    bottom: 50px;
-    right: 50px;
+    bottom: 40px;
+    right: 40px;
 }
 
 .close{
-    top: 50px;
-    left: 50px;
+    top: 40px;
+    left: 40px;
 }
 
-.rotate{
+.rotate-button{
     transform: rotateZ(-180deg);
     transition: ease-in-out 0.5s;
 }
 
 .page{
-    background-color: aquamarine;
+    min-height: 100vh;
+    background-color: #fafafa;
     z-index: 0;
-    transform-origin: top left;
-    transform: rotateZ(-20deg);
-    transition: ease 1s;
     margin: 0 auto;
     padding: 70px 21vw 0px;
+    transition: transform 0.5s linear;
+}
+.rotate-page{
+    transform-origin: top left;
+    transform: rotateZ(-20deg);
+    transition: transform 0.5s linear;
 }
 h1{
     margin-bottom: 0;
@@ -74,24 +78,28 @@ h1{
     width: 100%;
 }
 .nav-hidden{
-    position: absolute;
+    position: fixed;
     width: 500px;
-    height: 100vh;
-    transform-origin: top right;
-    transition: ease 1s;
+    min-height: 100vh;
+    transition:transform ease 0.5s;
     display: flex;
     flex-direction: column;
     justify-content: end;
     align-items: end;
     padding-bottom: 40px;
     top: 0;
+    transform: translateX(-500px) rotateZ(20deg);
+}
+.rotate-nav{
+    transform-origin: top right;
     transform: translateX(-500px) rotateZ(-20deg);
+    transition-delay: 0.2s;
 }
 .nav-link{
     margin-right: 50px;
     transform-origin: top left;
     transform: rotateZ(20deg);
-    transition: ease 1s;
+    transition:transform ease 1s;
     color: rgba(255, 255, 255, 0.806);
     font-size: 20px;
     font-weight: bold;
