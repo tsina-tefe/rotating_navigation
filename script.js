@@ -1,12 +1,18 @@
-document.querySelector('.open').addEventListener('click', () => {
-    document.querySelector('.circle').classList.add('rotate-button');
-    document.querySelector('.page').classList.add('rotate-page');
-    document.querySelector('.nav-hidden').classList.add('rotate-nav');
+const open = document.querySelector('.open');
+const close = document.querySelector('.close');
+const page = document.querySelector('.page');
+const circle = document.querySelector('.circle');
+const nav = document.querySelector('.nav-hidden');
+
+open.addEventListener('click', () => {
+    circle.classList.add('rotate-button');
+    page.classList.add('rotate-page');
+    nav.classList.add('rotate-nav');
 });
 
-document.querySelector('.close').addEventListener('click', () => {
-    document.querySelector('.circle').classList.remove('rotate-button');
-    document.querySelector('.page').classList.remove('rotate-page');
-    document.querySelector('.nav-hidden').classList.remove('rotate-nav');
+close.addEventListener('click', () => {
+    circle.classList.remove('rotate-button');
+    page.classList.remove('rotate-page');
+    nav.classList.remove('rotate-nav');
 });
 
