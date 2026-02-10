@@ -12,8 +12,9 @@ body{
     align-items: center;
     justify-content: center; */
     height: 100vh;
-    overflow: hidden;
     margin: 0;
+    background-color: black;
+    overflow-x: hidden;
 }
 
 .circle{
@@ -30,12 +31,16 @@ body{
     border-radius: 50%;
     background-color: brown;
 }
-
-.open, .close{
-    position: absolute;
+.nav img{
     width: 30px;
     height: 30px;
+}
+.open, .close{
+    position: absolute;
     cursor: pointer;
+    background-color: transparent;
+    outline: none;
+    border: none;
 }
 
 .open{
@@ -54,11 +59,52 @@ body{
 }
 
 .page{
-    width: 100vw;
-    height: 100vh;
     background-color: aquamarine;
     z-index: 0;
     transform-origin: top left;
-    transform: rotateZ(-30deg);
+    transform: rotateZ(-20deg);
     transition: ease 1s;
+    margin: 0 auto;
+    padding: 70px 21vw 0px;
+}
+h1{
+    margin-bottom: 0;
+}
+.page img{
+    width: 100%;
+}
+.nav-hidden{
+    position: absolute;
+    width: 500px;
+    height: 100vh;
+    transform-origin: top right;
+    transition: ease 1s;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+    padding-bottom: 40px;
+    top: 0;
+    transform: translateX(-500px) rotateZ(-20deg);
+}
+.nav-link{
+    margin-right: 50px;
+    transform-origin: top left;
+    transform: rotateZ(20deg);
+    transition: ease 1s;
+    color: rgba(255, 255, 255, 0.806);
+    font-size: 20px;
+    font-weight: bold;
+    text-indent: 10px;
+}
+.home{
+    margin-right: 70px;
+}
+.about{
+    margin-right: 65px;
+}
+.nav-link img{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
 }
